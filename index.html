@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+    <meta name="description" content="Connect Plus 홈페이지" />
+    <meta name="keywords" content="Connect Plus 홈페이지" />
+    <title>Connect Plus 홈페이지</title>
+    <link rel="icon" type="image/png" href="http://our365.sktelecom.com/home/images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="http://our365.sktelecom.com/home/css/librarys.css" />
+    <link rel="stylesheet" type="text/css" href="http://our365.sktelecom.com/home/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/home/css/style_2024.css" />
+    <link rel="stylesheet" type="text/css" href="http://our365.sktelecom.com/home/css/jquery-ui.css" />
+    <script type="text/javascript"
+        src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.filter%2CArray.from%2CElement.prototype.getAttributeNames%2CElement.prototype.closest"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <script src="http://our365.sktelecom.com/home/js/jquery-3.6.0.min.js"></script>
+    <script src="http://our365.sktelecom.com/home/js/jquery-ui.js"></script>
+    <script src="http://our365.sktelecom.com/home/js/jquery.form.js"></script>
+
+    <script src="http://our365.sktelecom.com/home/js/w3.js">
+        // w3c include HTML JS 실제 개발에서는 사용하지 않으므로 개발에서는 삭제필요....
+    </script>
+</head>
+
+<body>
+    <!-- S: skipnavi -->
+    <div class="skipnavi">
+        <span>메뉴 건너뛰기</span>
+        <ul>
+            <li><a href="#Header">상단메뉴 바로가기</a></li>
+            <li><a href="#Container">본문 바로가기</a></li>
+            <li><a href="#Footer">하단메뉴 바로가기</a></li>
+        </ul>
+    </div>
+    <!--<div w3-include-html="/include//skipnavi.html"></div>-->
+    <!-- //E: skipnavi -->
+
+    <div class="wrap">
+        <!-- S: Header -->
+        <header class="header_2024 main-page">
+            <div class="header-inner">
+                <div class="header-left">
+                    <h1 class="header-logo">
+                    </h1>
+                </div>
+                <div class="header-right">
+                    <div class="gnb">
+                        <!-- S: depth1-area -->
+                        <div class="depth1-area">
+                            <ul class="depth1">
+                                <li>
+                                    <a href="javascript:;" class="depth1-button">gbs</a>
+                                    <div class="depth2-area">
+                                        <ul class="depth2">
+                                            <li><a href="/gbs/monthly?searchType=GNB">월간 편성표</a></li>
+                                            <li><a href="/gbs/latest?searchType=GNB">최신방송</a></li>
+                                            <li><a href="/gbs/archive?searchType=GNB">gbs 아카이브</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="depth1-button">+Lounge</a>
+                                    <div class="depth2-area">
+                                        <ul class="depth2">
+                                            <li><a href="/t-lounge/work?searchType=GNB">Work+</a></li>
+                                            <li><a href="/t-lounge/life?searchType=GNB">Life+</a></li>
+                                            <li><a href="/t-lounge/happy?searchType=GNB">Happy+</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="depth1-button">+Now</a>
+                                    <div class="depth2-area">
+                                        <ul class="depth2">
+                                            <li><a href="/t-now/event?searchType=GNB">이벤트</a></li>
+                                            <li><a href="/t-now/campaign?searchType=GNB">함께 톡해요</a></li>
+                                            <li><a href="/t-now/t-survey?searchType=GNB">설문조사</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" class="depth1-button">Support</a>
+                                    <div class="depth2-area">
+                                        <ul class="depth2">
+                                            <li><a href="/support/notice?searchType=GNB">공지사항</a></li>
+                                            <li><a href="/support/document-request?searchType=GNB">자료요청</a></li>
+                                            <li><a href="/support/news?searchType=GNB">기사제보, 구독의견</a></li>
+                                            <li><a href="/support/setup?searchType=GNB">gbs 설치 문의</a></li>
+                                            <li><a href="/support/magazine-replay?searchType=GNB">지난 호 다시보기</a></li>
+                                            <li><a href="/support/manager-info?searchType=GNB">담당자 안내</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- E: depth1-area -->
+                    </div>
+                    <div class="search-area">
+                        <button type="button" class="search-call-button"><span>검색</span></button>
+                    </div>
+                    <!-- E: depth1-area -->
+                </div>
+            </div>
+            <!-- S: Search Box -->
+            <div class="search-box">
+                <div class="search-keyword">
+                    <div class="in-sect">
+                        <form id="header-search-form" action="/search" method="get">
+                            <div class="search-bar keywords-box js-input-field">
+                                <input type="text" name="searchWord" id="searchTxt"
+                                    class="search-input search-input-kwd js-input" placeholder="검색어를 입력해주세요." value="">
+                                <a onclick="document.getElementById('header-search-form').submit()"
+                                    class="search-button"></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- E: Search Box -->
+        </header>
+        <!--    <div w3-include-html="/include//header.html"></div>-->
+        <!-- //E: Header -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <!-- S: Container -->
+        <section class="container main">
+            <div class="content page-main"> <!-- 필요한경우 페이지별 클래스 사용 page-[] -->
+                adsafasdf
+            </div>
+        </section>
+        <!--//E: Container -->
+        <div class="modal-popup popup-notice" style="display: block_; top: 200px; left: 100px;">
+            <div class="modal-notice">
+                <div class="modal-body">
+                    <form id="popupAddViewCountForm" action="/popup" method="post">
+                        <input type="hidden" name="redirectUri" value="http://our365.sktelecom.com/t-now/event/957">
+                        <input type="hidden" name="id" value="75">
+                        <a onclick="popupClick(75);">
+                            <img max-width="100%" src="http://our365.sktelecom.com/upload/popup/202403/0c90f46e-2fd0-4396-8ec7-4b7efe025c0a.jpg"
+                                alt="">
+                        </a>
+                    </form>
+                    <div class="modal-foot">
+                        <span class="check form-style" onclick="layerPopupCheck();">
+                            <input type="checkbox" id="notOpen1">
+                            <label for="notOpen1" class="dont-show-again">오늘 하루 보지 않기</label>
+                        </span>
+                        <button type="button" class="modal-close" onclick="frontUI.modeless.close();">
+                            <span>닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- E: Modal -->
+
+    <!-- S: Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="http://our365.sktelecom.com/home/images/img_footerLogo.png" alt="CONNECT">
+            </div>
+            <div class="footer-left">
+                <p class="copyright">© 2021. SK TELECOM. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-menu">
+                    <li><a href="/privacy-policy">개인정보처리방침</a></li>
+                    <li><a href="/support/manager-info">담당자 안내</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- //E: Footer -->
+    </div>
+    <!-- E: Modal -->
+    <script src="http://our365.sktelecom.com/home/js/skrollr.js"></script>
+    <script src="http://our365.sktelecom.com/home/js/main.js"></script>
+    <script src="http://our365.sktelecom.com/home/js/librarys.js"></script>
+    <script src="/home/js/front_ui_2024.js"></script>
+</body>
+
+</html>
