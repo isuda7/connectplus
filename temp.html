@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+    <meta name="description" content="Connect Plus 홈페이지" />
+    <meta name="keywords" content="Connect Plus 홈페이지" />
+    <title>Connect Plus 홈페이지</title>
+    <link rel="icon" type="image/png" href="http://our365.sktelecom.com/home/images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="http://our365.sktelecom.com/home/css/librarys.css" />
+    <link rel="stylesheet" type="text/css" href="http://our365.sktelecom.com/home/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="http://our365.sktelecom.com/home/css/jquery-ui.css" />
+    <script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.filter%2CArray.from%2CElement.prototype.getAttributeNames%2CElement.prototype.closest"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <script src="http://our365.sktelecom.com/home/js/jquery-3.6.0.min.js"></script>
+    <script src="http://our365.sktelecom.com/home/js/jquery-ui.js"></script>
+    <script src="http://our365.sktelecom.com/home/js/jquery.form.js"></script>
+
+    <script src="http://our365.sktelecom.com/home/js/w3.js">
+        // w3c include HTML JS 실제 개발에서는 사용하지 않으므로 개발에서는 삭제필요....
+    </script>
+</head>
+
+<body>
+<!-- S: skipnavi -->
+<div class="skipnavi">
+    <span>메뉴 건너뛰기</span>
+    <ul>
+        <li><a href="#Header">상단메뉴 바로가기</a></li>
+        <li><a href="#Container">본문 바로가기</a></li>
+        <li><a href="#Footer">하단메뉴 바로가기</a></li>
+    </ul>
+</div>
+<!--<div w3-include-html="/include//skipnavi.html"></div>-->
+<!-- //E: skipnavi -->
+
+<div class="wrap">
+    <!-- S: Header -->
+    <header class="header main-page">
+    <div class="header-inner">
+        <div class="header-left">
+            <h1 class="header-logo">
+            </h1>
+        </div>
+        <div class="header-right">
+            <div class="gnb">
+                <!-- S: depth1-area -->
+                <div class="depth1-area">
+                    <ul class="depth1">
+                            <li>
+                                <a href="javascript:;" class="depth1-button">gbs</a>
+                                <div class="depth2-area">
+                                    <ul class="depth2">
+                                            <li><a href="/gbs/monthly?searchType=GNB">월간 편성표</a></li>
+                                            <li><a href="/gbs/latest?searchType=GNB">최신방송</a></li>
+                                            <li><a href="/gbs/archive?searchType=GNB">gbs 아카이브</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="depth1-button">+Lounge</a>
+                                <div class="depth2-area">
+                                    <ul class="depth2">
+                                            <li><a href="/t-lounge/work?searchType=GNB">Work+</a></li>
+                                            <li><a href="/t-lounge/life?searchType=GNB">Life+</a></li>
+                                            <li><a href="/t-lounge/happy?searchType=GNB">Happy+</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="depth1-button">+Now</a>
+                                <div class="depth2-area">
+                                    <ul class="depth2">
+                                            <li><a href="/t-now/event?searchType=GNB">이벤트</a></li>
+                                            <li><a href="/t-now/campaign?searchType=GNB">함께 톡해요</a></li>
+                                            <li><a href="/t-now/t-survey?searchType=GNB">설문조사</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="depth1-button">Support</a>
+                                <div class="depth2-area">
+                                    <ul class="depth2">
+                                            <li><a href="/support/notice?searchType=GNB">공지사항</a></li>
+                                            <li><a href="/support/document-request?searchType=GNB">자료요청</a></li>
+                                            <li><a href="/support/news?searchType=GNB">기사제보, 구독의견</a></li>
+                                            <li><a href="/support/setup?searchType=GNB">gbs 설치 문의</a></li>
+                                            <li><a href="/support/magazine-replay?searchType=GNB">지난 호 다시보기</a></li>
+                                            <li><a href="/support/manager-info?searchType=GNB">담당자 안내</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                    </ul>
+                </div>
+                <!-- E: depth1-area -->
+            </div>
+            <div class="search-area">
+                <button type="button" class="search-call-button"><span>검색</span></button>
+            </div>
+            <!-- E: depth1-area -->
+        </div>
+    </div>
+    <!-- S: Search Box -->
+    <div class="search-box" >
+        <div class="search-keyword">
+            <div class="in-sect">
+                <form id="header-search-form" action="/search" method="get">
+                    <div class="search-bar keywords-box js-input-field">
+                        <input type="text" name="searchWord" id="searchTxt" class="search-input search-input-kwd js-input" placeholder="검색어를 입력해주세요." value="">
+                        <a onclick="document.getElementById('header-search-form').submit()" class="search-button"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- E: Search Box -->
+</header>
+<!--    <div w3-include-html="/include//header.html"></div>-->
+    <!-- //E: Header -->
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <!-- S: Container -->
+        <section class="container main">
+            <div class="content page-main"> <!-- 필요한경우 페이지별 클래스 사용 page-... -->
+                <!-- S: MainVisual Area -->
+                    <article class="main-visual-area">
+                            <div class="display-board module-a style-a">
+                                    <span class="board-wrap">
+                                        <img src="http://our365.sktelecom.com/upload/main-banner/202403/891e8470-5f33-40a2-ab31-62b4fe0643a5.jpg" alt="업무 효율을 높게 팀워크는 끈끈하게! 재택근무 시 업무 효율과 팀워크를 유지하는 노하우를 알려주세요." />
+                                    </span>
+                            </div>
+                        <!-- 띠배너 영역 *도은전임님* -->
+                            <div class="display-board module-a style-b" style="background-color:#1851f3;">
+                                    <a class="board-wrap" id="lineBannerATag" onclick="lineClick(3890,'http://our365.sktelecom.com/t-lounge/work/closeup/1413');">
+                                        <img src="http://our365.sktelecom.com//upload/sub-banner/202403/a73d8deb-a8ef-41d6-9d2f-b7d81f31c5c9.jpg" alt="띠배너">
+                                    </a>
+                            </div>
+                    </article>
+
+                    <form id="addViewCountForm" action="/main/subbanner" method="post">
+                        <input type="hidden" name="redirectUri" value="">
+                        <input type="hidden" name="id" value="">
+                    </form>
+                <!-- E: Visual Area -->
+                <script>
+                    //라인 클릭 추가
+                    function lineClick(id, u) {
+                        var f = document.getElementById("addViewCountForm")
+                        f.redirectUri.value=u;
+                        f.id.value=id;
+
+                        var data = {
+                            id: id
+                        }
+                        $.ajax({
+                            url: '/api/v1/viewCount/linebanner',
+                            type: 'post',
+                            contentType: 'application/json; charset=utf-8',
+                            headers: {
+                                'X-CSRF-TOKEN': $('input[name="_csrf"]').val()
+                            },
+                            data: JSON.stringify(data),
+                            success: function () {
+                                            location.href = "http://our365.sktelecom.com/t-lounge/work/closeup/1413";
+                            },
+                            error: function (err) {
+                                alert("다시 시도해 주세요.");
+                            }
+                        });
+                    }
+
+                </script>
+
+                <!-- S: Lounge Area-->
+                <article class="lounge-area">
+                    <div class="in-sect">
+                        <div class="title-box">
+                            <h2>+Lounge</h2>
+                        </div>
+                        <ul class="lounge-list">
+                                <li>
+                                    <form id="tLoungeAddViewCountForm3891" action="/main/subbanner" method="post">
+                                        <input type="hidden" name="redirectUri" value="/t-lounge/work/closeup/1414">
+                                        <input type="hidden" name="id" value="3891">
+                                        <a href="javascript:$('#tLoungeAddViewCountForm3891').submit()">
+                                            <img max-width="100%" src="/upload/sub-banner/202403/502afc50-5e7c-471f-b904-86202ef87a94.png"
+                                                 alt="[창사 40주년 공간 프로그램] 40년의 여정을 함께 기념하고 응원하다" width="360px" height="360px">
+                                        </a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form id="tLoungeAddViewCountForm3889" action="/main/subbanner" method="post">
+                                        <input type="hidden" name="redirectUri" value="/t-lounge/work/closeup/1413">
+                                        <input type="hidden" name="id" value="3889">
+                                        <a href="javascript:$('#tLoungeAddViewCountForm3889').submit()">
+                                            <img max-width="100%" src="/upload/sub-banner/202403/a34b2c6c-9475-4e99-aaaa-57db16c815d8.png"
+                                                 alt="[창사 40주년 특집] 구성원이 선정한 우리 회사 10대 Moments" width="360px" height="360px">
+                                        </a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form id="tLoungeAddViewCountForm3888" action="/main/subbanner" method="post">
+                                        <input type="hidden" name="redirectUri" value="/t-lounge/work/inside/1412">
+                                        <input type="hidden" name="id" value="3888">
+                                        <a href="javascript:$('#tLoungeAddViewCountForm3888').submit()">
+                                            <img max-width="100%" src="/upload/sub-banner/202403/0fa2150e-4053-49a5-9b2b-fb5d3dc01e88.png"
+                                                 alt="우리 회사 스포츠 마케팅이 특별한 이유 " width="360px" height="360px">
+                                        </a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form id="tLoungeAddViewCountForm3885" action="/main/subbanner" method="post">
+                                        <input type="hidden" name="redirectUri" value="/t-lounge/life/ailife/1411">
+                                        <input type="hidden" name="id" value="3885">
+                                        <a href="javascript:$('#tLoungeAddViewCountForm3885').submit()">
+                                            <img max-width="100%" src="/upload/sub-banner/202403/eee5e70a-ce76-4e69-8646-915ec642f3da.png"
+                                                 alt="AI와 함께하는 일상_ 11. Hobby 취미 활동도 AI로 스마트하게" width="360px" height="360px">
+                                        </a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form id="tLoungeAddViewCountForm3884" action="/main/subbanner" method="post">
+                                        <input type="hidden" name="redirectUri" value="/t-lounge/life/cometogether/1410">
+                                        <input type="hidden" name="id" value="3884">
+                                        <a href="javascript:$('#tLoungeAddViewCountForm3884').submit()">
+                                            <img max-width="100%" src="/upload/sub-banner/202403/e908446c-ddeb-4438-b8df-24021f3b33cc.png"
+                                                 alt="고민보다 일단 GO! 18세 스케이트보더 조현주의 인생 네 컷" width="360px" height="360px">
+                                        </a>
+                                    </form>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="rolling-circle circle1" data-top='transform:rotate(90deg);'
+                         data--1500-bottom='transform:rotate(150deg);'></div>
+                </article>
+                <!-- e: Lounge Area -->
+                <!-- S: GBS Area-->
+                <article class="gbs-area">
+                        <div class="in-sect">
+                            <div class="title-box">
+                                <h2>gbs</h2>
+                            </div>
+                            <div class="text-box">
+                                <strong class="program-title">Newscast</strong>
+                                <p class="broadcast-title">주간SKT</p>
+                            </div>
+                        </div>
+
+                        <div class="video-box">
+                            <button type="button" id="btn_gbs_player" class="btn-player stop"><span>영상 멈춤</span></button>
+                            <video id="video_gbs" controls poster="">
+                                <source src="/vod/gbs/202404/240401_gbs.mp4">
+                            </video>
+                        </div>
+
+                        <div class="video-relation">
+                            <div class="switch-box">
+                                <button type="button" id="video_switch" class="btn-switch btn-circle__orange">
+                                    <span>관련 영상 목록 더보기</span></button>
+                            </div>
+                            <div class="video-list">
+                                <ul>
+                                        <li>
+                                            <a href="/gbs/monthly/7642?searchType=ASSOCIATED" >
+                                                <div class="img-box">
+                                                    <img src="/upload/gbs/202403/123cea4a-cf92-4d58-90ad-f62422cccdb6.png" alt="">
+                                                </div>
+                                                <div class="txt-box">
+                                                    <span class="ico-play"></span>
+                                                    <p>40주년 특집 / 2024.03.27</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/gbs/monthly/7641?searchType=ASSOCIATED" >
+                                                <div class="img-box">
+                                                    <img src="/upload/gbs/202403/5b911a5a-304e-49a4-a4a2-4a13b3be39da.jpg" alt="">
+                                                </div>
+                                                <div class="txt-box">
+                                                    <span class="ico-play"></span>
+                                                    <p>Newscast / 2024.03.25</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/gbs/monthly/7639?searchType=ASSOCIATED" >
+                                                <div class="img-box">
+                                                    <img src="/upload/gbs/202403/49b96fd1-d920-44c4-9e84-1a2180f5ec89.jpg" alt="">
+                                                </div>
+                                                <div class="txt-box">
+                                                    <span class="ico-play"></span>
+                                                    <p>테크살롱 / 2024.03.20</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rolling-circle circle2" data-1000-top='transform:rotate(30deg);'
+                             data--2500-bottom='transform:rotate(150deg);'></div>
+                </article>
+                <!-- e: GBS Area -->
+                <!-- S: Best Content Area-->
+                <article class="bestContent-area">
+                    <div class="in-sect">
+                        <div class="title-box">
+                            <h2>Best <br>Contents</h2>
+                        </div>
+                        <ul class="bestContent-list">
+                                <li>
+                                    <form id="bestContentsAddViewCountForm3893" action="/main/subbanner"
+                                          method="post">
+                                        <input type="hidden" name="redirectUri" value="/t-lounge/life/wlb/1408">
+                                        <input type="hidden" name="id" value="3893">
+                                        <a href="javascript:$('#bestContentsAddViewCountForm3893').submit()">
+                                            <div class="img-box">
+                                                <img src="/upload/sub-banner/202404/e62fbec7-43de-4166-955c-982bfc1e919d.png"
+                                                     alt="PRESS RELEASE 관련 이미지" width="365px" height="340px">
+                                            </div>
+                                            <div class="txt-box">
+                                                <strong class="txt-title">출퇴근 시간에 뭐 해요? 저는 자격증 공부합니다!</strong>
+                                                <div class="txt-desc">한 연구에 따르면 직장인의 출퇴근 시간은 평균 1시간 24분, 그 중 70%는 음악을 듣거나 동영상을 시청한다고 합니다. Asset Mgmt팀 김성규 님은 출퇴근 시간을 활용해서 자격증 공부를 하고 있는데요,</div>
+                                            </div>
+                                        </a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form id="bestContentsAddViewCountForm3886" action="/main/subbanner"
+                                          method="post">
+                                        <input type="hidden" name="redirectUri" value="/gbs/monthly/7637">
+                                        <input type="hidden" name="id" value="3886">
+                                        <a href="javascript:$('#bestContentsAddViewCountForm3886').submit()">
+                                            <div class="img-box">
+                                                <img src="/upload/sub-banner/202403/ad159e3d-8508-4ec8-8311-db48e603b734.png"
+                                                     alt="PRESS RELEASE 관련 이미지" width="365px" height="340px">
+                                            </div>
+                                            <div class="txt-box">
+                                                <strong class="txt-title">아네모이아</strong>
+                                                <div class="txt-desc"> 고객과 소비 트렌드를 면밀하게 분석해보는 고객탐구생활 시즌2! 최근 본인이 직접 경험하지 못한 시대에 대한 추억과 향수를 뜻하는 아네모이아가 Z세대의 키워드로 떠오르고 있습니다.레트로-뉴트로와 차별화되는 아네모이아의 의미와이에 대한 마케팅 전략까지 분석해 봅니다.            </div>
+                                            </div>
+                                        </a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form id="bestContentsAddViewCountForm3887" action="/main/subbanner"
+                                          method="post">
+                                        <input type="hidden" name="redirectUri" value="/gbs/monthly/7636">
+                                        <input type="hidden" name="id" value="3887">
+                                        <a href="javascript:$('#bestContentsAddViewCountForm3887').submit()">
+                                            <div class="img-box">
+                                                <img src="/upload/sub-banner/202403/94f13b56-96e1-41a1-aaf4-53d5244e1d96.png"
+                                                     alt="PRESS RELEASE 관련 이미지" width="365px" height="340px">
+                                            </div>
+                                            <div class="txt-box">
+                                                <strong class="txt-title">MWC 2024 - 글로벌 트렌드</strong>
+                                                <div class="txt-desc"> 2월 26일부터 2월 29일까지 스페인 바르셀로나에서 개최된 세계 최대 모바일 전시회 MWC 2024! ‘Future First&#39;를 주제로  전 세계 2,400여 개 기업이 참여해 혁신적인 아이템을 선보였는데요.  2023년 주니어보드 수상 구성원이직접 글로벌 기업들의 부스를 탐방하며인상깊은 아이템을 소개하고‘MWC 인생네컷’을 완성했습니다!</div>
+                                            </div>
+                                        </a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form id="bestContentsAddViewCountForm3883" action="/main/subbanner"
+                                          method="post">
+                                        <input type="hidden" name="redirectUri" value="/t-lounge/work/inside/1401">
+                                        <input type="hidden" name="id" value="3883">
+                                        <a href="javascript:$('#bestContentsAddViewCountForm3883').submit()">
+                                            <div class="img-box">
+                                                <img src="/upload/sub-banner/202403/74e982aa-8a8f-43dc-868e-cb6e8f5fedcd.png"
+                                                     alt="PRESS RELEASE 관련 이미지" width="365px" height="340px">
+                                            </div>
+                                            <div class="txt-box">
+                                                <strong class="txt-title">DNA(Deep Network AI) 기술, 3차원 공간을 더욱 입체적이고 정교하게 </strong>
+                                                <div class="txt-desc">지난 1월 선보인 DNA(Deep Network AI)는 우리 회사의 AI 기반 네트웤 품질 분석, 실내 측위, 모빌리티 분석 기술을 융합한 결과물입니다.</div>
+                                            </div>
+                                        </a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form id="bestContentsAddViewCountForm3843" action="/main/subbanner"
+                                          method="post">
+                                        <input type="hidden" name="redirectUri" value="/t-lounge/life/wlb/1387">
+                                        <input type="hidden" name="id" value="3843">
+                                        <a href="javascript:$('#bestContentsAddViewCountForm3843').submit()">
+                                            <div class="img-box">
+                                                <img src="/upload/sub-banner/202401/cf421496-aa79-4fcc-8d18-39cf90ea99f2.png"
+                                                     alt="PRESS RELEASE 관련 이미지" width="365px" height="340px">
+                                            </div>
+                                            <div class="txt-box">
+                                                <strong class="txt-title">Walk Drink Breathe 일상을 풍요롭게 하는 습관들</strong>
+                                                <div class="txt-desc">복잡하고 어려운 것에 매달려야 하는 생활 속에서 단순하고 무던하게 지내기 위해서는 연습이 필요합니다.</div>
+                                            </div>
+                                        </a>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form id="bestContentsAddViewCountForm3892" action="/main/subbanner"
+                                          method="post">
+                                        <input type="hidden" name="redirectUri" value="/gbs/monthly/7639">
+                                        <input type="hidden" name="id" value="3892">
+                                        <a href="javascript:$('#bestContentsAddViewCountForm3892').submit()">
+                                            <div class="img-box">
+                                                <img src="/upload/sub-banner/202404/ad1e3ae1-4732-4ea0-9916-f507ef512f68.png"
+                                                     alt="PRESS RELEASE 관련 이미지" width="365px" height="340px">
+                                            </div>
+                                            <div class="txt-box">
+                                                <strong class="txt-title">테크살롱 12회</strong>
+                                                <div class="txt-desc"> 월별 주요 IT 이슈를 전하는 테크살롱!글로벌 테크 미디어 &lt;테크니들&gt; 임재완 편집장과 함께3월 최신 테크 소식을 만나봅니다. 애플의 자율주행차 개발 포기와 피봇 방향, Anthropic 최신 언어모델 Claude 3 공개,OpenAI 상대로 소송 건 일론 머스크와 AGI관련 이야기를 짚어봅니다.&lt;br aria-hidden&#x3D;&quot;true&quot;&gt;그리고 이달의 가장 핫한 이야기를 깊이 있게 만나보는 코너, &amp;lt;Global Tech In Depth&amp;gt;에서는 OpenAI의 동영상 생성 AI ‘Sora’에 대한 전문가들의 기대와 우려 소식을 다뤄봅니다.            </div>
+                                            </div>
+                                        </a>
+                                    </form>
+                                </li>
+                            <!--                            <li>-->
+                            <!--                                <a href="javascript:void(0);">-->
+                            <!--                                    <div class="img-box">-->
+                            <!--                                        <img src="http://our365.sktelecom.com/home/upload/@img_mainBestContent_02.png" alt="CULTURE 관련 이미지">-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="txt-box">-->
+                            <!--                                        <strong class="txt-title">[CULTURE] 우리집이 Cafe! Bar? 트랜드를 입은 공간 ‘네온사인’-->
+                            <!--                                            DIY</strong>-->
+                            <!--                                        <div class="txt-desc">화룡점정이라 했다! 무엇이든 결정적 한 방이 남다름을 만드는 것. 평범하기만 했던 우리집이 트렌디하게-->
+                            <!--                                            변신할-->
+                            <!--                                            화룡점정이라 했다!-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                </a>-->
+                            <!--                            </li>-->
+                            <!--                            <li>-->
+                            <!--                                <a href="javascript:void(0);">-->
+                            <!--                                    <div class="img-box">-->
+                            <!--                                        <img src="http://our365.sktelecom.com/home/upload/@img_mainBestContent_03.png" alt="CLUB SPACE 관련 이미지">-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="txt-box">-->
+                            <!--                                        <strong class="txt-title">[동호회 공간] 비트와 함께 EDM의 매력에 흠뻑 빠지다</strong>-->
+                            <!--                                        <div class="txt-desc">계절마다 어울리는 음악 장르가 있다면 여름에 꼭 맞는 것 은 EDM 아닐까요? 쉴 새 없이 쿵쾅거리는-->
+                            <!--                                            비트와-->
+                            <!--                                            시원한 계절마다 어울리는-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                </a>-->
+                            <!--                            </li>-->
+                            <!--                            <li>-->
+                            <!--                                <a href="javascript:void(0);">-->
+                            <!--                                    <div class="img-box">-->
+                            <!--                                        <img src="http://our365.sktelecom.com/home/upload/@img_mainBestContent_04.png" alt="PRESS RELEASE 관련 이미지">-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="txt-box">-->
+                            <!--                                        <strong class="txt-title">[보도자료] 공공서비스도 PASS 인증서로 쉽고 간편하게</strong>-->
+                            <!--                                        <div class="txt-desc"> PASS 앱에서 3초면 무료로 발급 OK, 15일부터 간편하게 연말정산 서비스 접속 가능 - 간편하고-->
+                            <!--                                            신속하면서도 국PASS 앱에서-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                </a>-->
+                            <!--                            </li>-->
+                            <!--                            <li>-->
+                            <!--                                <a href="javascript:void(0);">-->
+                            <!--                                    <div class="img-box">-->
+                            <!--                                        <img src="http://our365.sktelecom.com/home/upload/@img_mainBestContent_05.png" alt="EVENT 관련 이미지">-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="txt-box">-->
+                            <!--                                        <strong class="txt-title">[이벤트] 2021 새해맞이 선물 이벤트</strong>-->
+                            <!--                                        <div class="txt-desc">- 응모 기간 : 2019. 01. 14 (월) ~ 2019. 02. 08 (금) - 이벤트 경품 :-->
+                            <!--                                            [크리스피크림] 오리지널 하프더즌 (12명) 응모 기간 : 2019. 01. 14 (월)-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                </a>-->
+                            <!--                            </li>-->
+                            <!--                            <li>-->
+                            <!--                                <a href="javascript:void(0);">-->
+                            <!--                                    <div class="img-box">-->
+                            <!--                                        <img src="http://our365.sktelecom.com/home/upload/@img_mainBestContent_06.png" alt="INSIGHT 관련 이미지">-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="txt-box">-->
+                            <!--                                        <strong class="txt-title">[INSIGHT] 혹시 나도? 코로나 블루 자가진단과 마음 백신 처방</strong>-->
+                            <!--                                        <div class="txt-desc">이유 없이 우울해지거나 불안감, 무기력증을 느끼는 코로나 블루. 마음 상태를 자세히 들여다보고 예방법을-->
+                            <!--                                            이유-->
+                            <!--                                            없이 우울해지거나-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                </a>-->
+                            <!--                            </li>-->
+                        </ul>
+                    </div>
+                    <div class="rolling-circle circle3" data-1000-top='transform:rotate(-90deg);'
+                         data--100-bottom='transform:rotate(0deg);'></div>
+                </article>
+                <!-- e: Best Content Area -->
+            </div>
+        </section>
+        <!--//E: Container -->
+            <div class="modal-popup popup-notice">
+                <div class="modal-notice">
+                    <div class="modal-body">
+                        <form id="popupAddViewCountForm" action="/popup" method="post">
+                            <input type="hidden" name="redirectUri" value="http://our365.sktelecom.com/t-now/event/957">
+                            <input type="hidden" name="id" value="75">
+                            <a onclick="popupClick(75);">
+                                <img max-width="100%" src="/upload/popup/202403/0c90f46e-2fd0-4396-8ec7-4b7efe025c0a.jpg" alt="">
+                            </a>
+                        </form>
+                        <div class="modal-foot">
+                        <span class="check form-style" onclick="layerPopupCheck();">
+                            <input type="checkbox" id="notOpen1">
+                            <label for="notOpen1" class="dont-show-again">오늘 하루 보지 않기</label>
+                        </span>
+                            <button type="button" class="modal-close" onclick="frontUI.modeless.close();">
+                                <span>닫기</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- E: Modal -->
+        <script src="http://our365.sktelecom.com/home/js/skrollr.js"></script>
+        <script src="http://our365.sktelecom.com/home/js/main.js"></script>
+
+        <!-- S: Footer -->
+        <footer class="footer">
+        <div class="footer-inner">
+			<div class="footer-logo">
+				<img src="http://our365.sktelecom.com/home/images/img_footerLogo.png" alt="CONNECT">
+			</div>
+            <div class="footer-left">
+                <p class="copyright">© 2021. SK TELECOM. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-menu">
+                    <li><a href="/privacy-policy">개인정보처리방침</a></li>
+                    <li><a href="/support/manager-info">담당자 안내</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- //E: Footer -->
+</div>
+<!-- E: Modal -->
+<script src="http://our365.sktelecom.com/home/js/librarys.js"></script>
+<script src="http://our365.sktelecom.com/home/js/front_ui.js"></script>
+</body>
+</html>
